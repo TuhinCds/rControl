@@ -30,7 +30,7 @@ function toggleBtn(toggle){
 
 
 async function showDisplay(showNumber){
-    let display = await fetch(`http://192.168.10.98/display?show=${showNumber}`)
+    let display = await fetch(`https://pennant-expend-snugly.ngrok-free.dev/display?show=${showNumber}`)
     if(!display.ok) return 
     let displayResponse = await display.json()
     console.log(displayResponse)
@@ -41,6 +41,7 @@ async function timerDisplay(start=0, end=9, delay=1, isBuzzOnEnd=false) {
     let response = await display.json()
     console.log(response)
 }
+// func
 
 
 allBtns.forEach((btn) => {
