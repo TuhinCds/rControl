@@ -1,0 +1,177 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    user-select: none;
+}
+.container{
+    background: rgba(245, 245, 245, 0.085);
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 30px;
+    height: 73vh;
+    border: .5px solid rgba(255, 255, 255, 0.072);
+}
+.btns_handle_display {
+    padding-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border-bottom: .8px solid rgba(255, 255, 255, 0.079);
+    gap: 3px;
+
+}
+.btns_handle_display .btn.active{
+    background: #fefefe1b;
+}
+#autoBtn.active{
+    background: #fefefe1e;
+}
+.btns_handle_display .btn {
+    padding: 17px;
+    width: 113px;
+    border: none;
+    background: rgba(255, 255, 255, 0.036);
+    font-size: 1.5rem;
+    color: rgb(205, 205, 205);
+    border: 1px solid rgba(255, 255, 255, 0.064);
+    transform: scale(1);
+    transition: transform .1s;
+}
+.btns_handle_display .btn:active{
+    transform: scale(0.5);
+}
+.btns_handle_display .btn:hover {
+    background: #fefefe1b;
+}
+.autoButton {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    align-items: center;
+    /* background: red; */
+}
+#autoBtn {
+    padding: 15px;
+    font-size: 1.1rem;
+    border-radius: 15px;
+    border: none;
+    background: rgba(252, 252, 252, 0.074);
+    color: rgba(255, 255, 255, 0.752);
+    border: .5px solid rgba(255, 255, 255, 0.056);
+    width: 200px;
+}
+#autoBtn:hover {
+    background: #ffffff1e;
+}
+.autoButton p {
+    color: rgba(219, 219, 219, 0.475);
+}
+.inputGroup {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 5px;
+}
+.inputGroup input {
+    width: 110px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.063);
+    border: none;
+    color: rgba(228, 228, 228, 0.859);
+    font-size: 1rem;
+    border-radius: 10px;
+    outline: none;
+}
+
+
+
+#DoneBtn {
+    padding: 15px;
+    width: 100%;
+    border-radius: 20px;
+    margin-top: 20px;
+    font-size: 1.1rem;
+    border: none;
+    font-weight: bold;
+}
+
+#switch_toggle{
+    width: 60px;
+    height: 30px;
+    background: rgba(253, 253, 253, 0.088);
+    border-radius: 700px;
+    cursor: pointer;
+}
+.btnToggle {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+    position: relative;
+}
+#cirleBtn{
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.297);
+    position: absolute;
+    border-radius: 500px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5px;
+    transition: left .4s, background-color .4s;
+}
+#switch_toggle.on #cirleBtn{
+    width: 20px;
+    height: 20px;
+    background: rgba(122, 146, 255, 0.867);
+    position: absolute;
+    border-radius: 500px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 35px;
+}
+#switch_toggle.on {
+    background: rgba(112, 143, 255, 0.342);
+}
+
+
+
+
+
+@media (max-width: 470px) {
+    .btns_handle_display .btn:nth-child(1){
+        border-radius: 15px 0 0 0;
+    }
+    .btns_handle_display .btn:nth-child(3){
+        border-radius: 0 15px 0 0;
+    }
+    .btns_handle_display .btn:nth-child(7){
+        border-radius: 0 0 0 15px;
+    }
+    .btns_handle_display .btn:nth-child(9){
+        border-radius: 0 0 15px 0;
+    }
+}
+
+@media (min-width: 600px) {
+    .btns_handle_display .btn{
+        flex: 1;
+        width: auto;
+        padding: 22px;
+    }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IOT X</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="btns_handle_display">
+            <button class="btn display">1</button>
+            <button class="btn display">2</button>
+            <button class="btn display">3</button>
+            <button class="btn display">4</button>
+            <button class="btn display">5</button>
+            <button class="btn display">6</button>
+            <button class="btn display">7</button>
+            <button class="btn display">8</button>
+            <button class="btn display">9</button>
+        </div>
+        <div class="autoButton">
+            <button class="btn auto" id="autoBtn">Reset</button>
+            <p>Or</p>
+            <p>Set range</p>
+            <div class="inputGroup">
+                <input type="text" placeholder="Start" id="StartInput">
+                <input type="text" placeholder="End" id="EndInput">
+                <input type="text" placeholder="Delay in second..." id="DelayTimeInput">
+            </div>
+            <div class="btnToggle">
+                <div id="switch_toggle"><div id="cirleBtn"></div></div>
+                <p>Add Sound to End</p>
+            </div>
+            <button id="DoneBtn">Done</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
