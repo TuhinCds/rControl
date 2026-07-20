@@ -36,12 +36,12 @@ async function showDisplay(showNumber){
     console.log(displayResponse)
 }
 async function timerDisplay(start=0, end=9, delay=1, isBuzzOnEnd=false) {
-    let display = await fetch(`http://192.168.10.98/display/timer?s=${start}&e=${end}&d=${delay*1000}&bE=${isBuzzOnEnd}`);
+    let display = await fetch(`https://pennant-expend-snugly.ngrok-free.dev/display/timer?s=${start}&e=${end}&d=${delay*1000}&bE=${isBuzzOnEnd}`);
     if(!display.ok) return
     let response = await display.json()
     console.log(response)
-}
-// func
+} 
+// functions
 
 
 allBtns.forEach((btn) => {
